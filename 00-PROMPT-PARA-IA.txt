@@ -1,0 +1,47 @@
+LEIA ESTE ARQUIVO PRIMEIRO.
+
+Você recebeu a pasta completa do projeto "Catálogo de Decants — Beleza com a Iza". Sua tarefa é recriar, manter ou evoluir o catálogo sem descaracterizar o trabalho já feito.
+
+1. Comece lendo os arquivos nesta ordem:
+   - README-PARA-IA.md
+   - produtos.json
+   - index.html
+
+2. Fonte de verdade:
+   - index.html contém o site completo e funcional.
+   - produtos.json é a lista estruturada dos 12 perfumes iniciais.
+   - logo-beleza-com-a-iza.jpeg é a logo que deve ser preservada.
+
+3. Requisitos que NÃO podem ser removidos sem autorização explícita:
+   - Marca: Beleza com a Iza.
+   - Preço padrão: R$ 21,99 por decant de 5 ml.
+   - Pedido por WhatsApp: +55 21 96406-0058.
+   - Abas de catálogo: Todos, Feminino e Masculino.
+   - Área de Administração com login, cadastro de perfume, carregamento de foto, indisponibilidade e remoção.
+   - Produtos indisponíveis permanecem visíveis, marcados como indisponíveis e sem botão de pedido.
+   - Fotos devem sempre aparecer completas, centralizadas, com object-fit: contain; nunca cortar frascos ou caixas.
+   - Não exibir "Ficha oficial WePink" nos cards.
+
+4. Visual:
+   - Preserve a logo e a paleta lilás/roxo/dourado.
+   - O visual precisa continuar elegante, minimalista e fácil de usar em celular.
+
+5. Administração atual:
+   - Usuário inicial: admin
+   - No primeiro acesso em cada navegador, a pessoa administradora define a própria senha local.
+   - É uma administração local baseada em localStorage: alterações ficam apenas no navegador/dispositivo que as criou.
+   - Imagens carregadas podem ter até 250 MB, mas imagens grandes podem ultrapassar a capacidade de armazenamento do navegador. Não afirme que elas serão compartilhadas entre dispositivos.
+
+6. Para editar/publicar:
+   - O site está publicado em https://vribeirogandra.github.io/catalogo-beleza-com-iza/
+   - O repositório é https://github.com/Vribeirogandra/catalogo-beleza-com-iza
+   - GitHub Pages publica automaticamente a branch main.
+   - Para atualizar: edite index.html e os assets necessários, depois faça commit e push.
+
+7. Validação obrigatória antes de entregar mudanças:
+   - Abra index.html no navegador.
+   - Confira logo, 12 produtos iniciais, abas e botão Administração.
+   - Teste o fluxo modificado (ex.: cadastro, indisponibilidade, remoção ou filtro).
+   - Não invente dados, imagens, credenciais ou resultados de publicação.
+
+Se houver necessidade de um painel online em que as alterações apareçam para todos os clientes e dispositivos, migre produtos, imagens, login e disponibilidade para backend/banco de dados com autenticação real. Não trate localStorage como painel multiusuário seguro.
