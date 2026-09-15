@@ -6,7 +6,7 @@ Este kit contém a versão final do catálogo digital de decants WePink criada p
 
 | Arquivo | Uso |
 |---|---|
-| `index.html` | Site completo: visual, produtos, abas, pedidos via WhatsApp e administração local. |
+| `index.html` | Site público: visual, produtos, abas e pedidos via WhatsApp. |
 | `assets/logo-beleza-com-a-iza.jpeg` | Logo original da marca. |
 | `produtos.json` | Lista estruturada dos 12 perfumes iniciais, categorias, notas e URLs de imagens oficiais. |
 | `PROMPT-PARA-IA.md` | Prompt pronto para outra IA continuar ou recriar o projeto. |
@@ -15,23 +15,13 @@ Este kit contém a versão final do catálogo digital de decants WePink criada p
 ## Como abrir e testar
 
 1. Abra `index.html` em um navegador.
-2. O catálogo deve mostrar 12 perfumes, a logo, abas **Todos**, **Feminino** e **Masculino**.
+2. O catálogo deve mostrar 12 perfumes, a logo e as abas **Todos**, **Feminino** e **Masculino**.
 3. Os botões `Pedir` abrem uma conversa no WhatsApp da loja: `+55 21 96406-0058`.
-4. O botão **Administração** abre o painel local.
+4. O catálogo público não possui painel de administração. Para atualizar produtos, edite os arquivos e envie as alterações ao GitHub.
 
-## Acesso da administração local
+## Atualizações e segurança
 
-- Usuário: `admin`
-- No primeiro acesso em cada navegador, defina uma senha de administração. Ela fica salva somente naquele navegador/dispositivo.
-
-Após entrar, o painel permite:
-- cadastrar perfume com nome, caminho olfativo, categoria, notas e imagem carregada do computador/celular;
-- definir cada produto como disponível/indisponível;
-- remover produto com confirmação;
-- alterar a senha;
-- restaurar os 12 produtos iniciais.
-
-As alterações usam `localStorage`: são salvas somente no navegador/dispositivo em que foram feitas. Este modelo funciona em uma página estática, mas não compartilha alterações entre visitantes. Para administração real on-line, migrar produtos, imagens, login e disponibilidade para um backend/banco de dados.
+As alterações reais do catálogo são versionadas no GitHub. Nunca envie dados pessoais, senhas, tokens, chaves de API ou informações de fornecedores ao repositório. Para uma administração on-line compartilhada no futuro, será necessário usar backend, banco de dados e autenticação real.
 
 ## Diretrizes de visual e conteúdo
 
@@ -45,8 +35,9 @@ As alterações usam `localStorage`: são salvas somente no navegador/dispositiv
 
 ## Publicação
 
-- Repositório privado: `https://github.com/belaviana1995-cell/catalogo-beleza-com-iza`
-- O site ainda não está publicado. Como o repositório é privado, a publicação no GitHub Pages exige um plano/organização compatível ou a mudança do repositório para público.
+- Repositório público: `https://github.com/belaviana1995-cell/catalogo-beleza-com-iza`
+- Site público: `https://belaviana1995-cell.github.io/catalogo-beleza-com-iza/`
+- Publicação: GitHub Pages, branch `main`, diretório raiz.
 
 ## Como enviar uma atualização ao GitHub
 
@@ -60,4 +51,4 @@ git push
 
 O GitHub Pages reconstrói o site automaticamente após o push.
 
-> Não expor tokens, senhas pessoais ou credenciais de API no repositório. A senha local acima é apenas o acesso embutido do protótipo estático e não é uma proteção adequada para um painel público.
+> Não expor tokens, senhas pessoais, credenciais de API, dados pessoais ou informações de fornecedores no repositório público.
