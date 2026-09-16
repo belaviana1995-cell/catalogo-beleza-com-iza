@@ -27,6 +27,7 @@ for (const [name, cents] of [
 }
 
 const brl = cents => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(cents / 100);
+assert.match(source, /const money=n=>\(n\/100\)\.toLocaleString\('pt-BR',\{style:'currency',currency:'BRL'\}\)/);
 assert.equal(brl(2499), 'R$ 24,99');
 assert.equal(brl(2299), 'R$ 22,99');
 assert.equal(brl(2199), 'R$ 21,99');
