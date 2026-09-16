@@ -1,4 +1,4 @@
-# Credenciais e configurações locais
+# Credenciais locais — nunca enviar chaves privadas
 .env
 .env.*
 !.env.example
@@ -6,7 +6,7 @@
 *.key
 *.p12
 *.pfx
-supabase-config.js
+# supabase-config.js contém apenas a Publishable key pública do frontend.
 
 # Arquivos gerados para envio local
 Catalogo-*.pdf
