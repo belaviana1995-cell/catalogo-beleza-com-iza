@@ -8,6 +8,14 @@
 *.pfx
 supabase-config.js
 
+# Arquivos gerados para envio local
+Catalogo-*.pdf
+Destaque-*.png
+catalogo-pronta-entrega.txt
+pdf-preview/
+criar_catalogo_*.py
+criar_destaque_*.py
+
 # Arquivos e pastas locais
 node_modules/
 .DS_Store
