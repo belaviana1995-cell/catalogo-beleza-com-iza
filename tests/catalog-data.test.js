@@ -26,6 +26,18 @@ for (const [name, cents] of [
   assert.ok(source.includes(`make('${name}','Árabes',${cents},true)`), `Preço incorreto: ${name}`);
 }
 
+for (const [tier, cents] of [['wp24', 2499], ['wp22', 2299], ['wp21', 2199]]) {
+  assert.ok(source.includes(`...${tier}.map(n=>make(n,'WePink',${cents}))`), `Preço incorreto na ${tier}`);
+}
+for (const name of ['Scarlette Radiance', 'Scarlette', 'VF Tropical', 'VF Golden', 'VF Bloom', 'VF Onyx', 'Infinity Cosmik', 'Infinity Tawny']) {
+  assert.ok(source.includes(`'${name}'`), `Produto ausente: ${name}`);
+}
+for (const [name, cents] of [['Her Code Clímax', 3599], ['Her Code Touch', 3599], ['Floratta Red', 2199]]) {
+  assert.ok(source.includes(`make('${name}','O Boticário',${cents})`), `Preço incorreto: ${name}`);
+}
+assert.ok(!source.includes("make('Air Code Clímax'"), 'Nome antigo Air Code Clímax ainda está no catálogo');
+assert.ok(!source.includes("make('Air Code Touch'"), 'Nome antigo Air Code Touch ainda está no catálogo');
+
 const brl = cents => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(cents / 100);
 assert.match(source, /const money=n=>\(n\/100\)\.toLocaleString\('pt-BR',\{style:'currency',currency:'BRL'\}\)/);
 assert.equal(brl(2499), 'R$ 24,99');
