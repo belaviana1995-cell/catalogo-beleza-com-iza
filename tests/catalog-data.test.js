@@ -35,6 +35,10 @@ for (const name of ['Scarlette Radiance', 'Scarlette', 'VF Tropical', 'VF Golden
 for (const [name, cents] of [['Her Code Clímax', 3599], ['Her Code Touch', 3599], ['Floratta Red', 2199]]) {
   assert.ok(source.includes(`make('${name}','O Boticário',${cents})`), `Preço incorreto: ${name}`);
 }
+assert.ok(source.includes("'Her Code Touch':'assets/her-code-touch.png'"), 'Imagem Her Code Touch não vinculada');
+assert.ok(source.includes("'Her Code Clímax':'assets/her-code-climax.webp'"), 'Imagem Her Code Clímax não vinculada');
+assert.ok(fs.existsSync('assets/her-code-touch.png'), 'Arquivo da imagem Her Code Touch não existe');
+assert.ok(fs.existsSync('assets/her-code-climax.webp'), 'Arquivo da imagem Her Code Clímax não existe');
 assert.ok(!source.includes("make('Air Code Clímax'"), 'Nome antigo Air Code Clímax ainda está no catálogo');
 assert.ok(!source.includes("make('Air Code Touch'"), 'Nome antigo Air Code Touch ainda está no catálogo');
 
