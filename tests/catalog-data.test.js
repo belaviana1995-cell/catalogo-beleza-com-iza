@@ -21,7 +21,7 @@ for (const name of ['Ruby', 'Capri', 'Feive', 'Wonderful', 'Castilho', 'King Blu
 for (const [name, cents] of [
   ['Musamam Intense', 4590], ['Athena', 3990], ['Yara Elixir', 3990],
   ['Durrat Al Aroos', 3990], ['Afeef', 4990], ['Fakhar Rose', 4590],
-  ['Sabah Al Ward', 3590], ['Sabah Al Ward Sugar', 3590], ['Asad Bourbon', 4590],
+  ['Sabah Al Ward', 3590], ['Sabah Al Ward Sugar', 3590], ['Asad Bourbon', 4590], ['Dalal', 4590],
 ]) {
   assert.ok(source.includes(`make('${name}','Árabes',${cents},true)`), `Preço incorreto: ${name}`);
 }
@@ -39,6 +39,8 @@ assert.ok(source.includes("'Her Code Touch':'assets/her-code-touch.png'"), 'Imag
 assert.ok(source.includes("'Her Code Clímax':'assets/her-code-climax.webp'"), 'Imagem Her Code Clímax não vinculada');
 assert.ok(fs.existsSync('assets/her-code-touch.png'), 'Arquivo da imagem Her Code Touch não existe');
 assert.ok(fs.existsSync('assets/her-code-climax.webp'), 'Arquivo da imagem Her Code Clímax não existe');
+assert.ok(source.includes("'Dalal':'assets/dalal-lattafa.webp'"), 'Imagem Dalal não vinculada');
+assert.ok(fs.existsSync('assets/dalal-lattafa.webp'), 'Arquivo da imagem Dalal não existe');
 assert.ok(!source.includes("make('Air Code Clímax'"), 'Nome antigo Air Code Clímax ainda está no catálogo');
 assert.ok(!source.includes("make('Air Code Touch'"), 'Nome antigo Air Code Touch ainda está no catálogo');
 
