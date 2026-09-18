@@ -41,6 +41,9 @@ assert.ok(fs.existsSync('assets/her-code-touch.png'), 'Arquivo da imagem Her Cod
 assert.ok(fs.existsSync('assets/her-code-climax.webp'), 'Arquivo da imagem Her Code Clímax não existe');
 assert.ok(source.includes("'Dalal':'assets/dalal-lattafa.webp'"), 'Imagem Dalal não vinculada');
 assert.ok(fs.existsSync('assets/dalal-lattafa.webp'), 'Arquivo da imagem Dalal não existe');
+assert.ok(source.includes("'One Touch Latte':'assets/one-touch-latte.png'"), 'Imagem One Touch Latte não vinculada');
+assert.ok(source.includes("'One Touch Latte'"), 'Produto One Touch Latte ausente');
+assert.ok(fs.existsSync('assets/one-touch-latte.png'), 'Arquivo da imagem One Touch Latte não existe');
 assert.ok(!source.includes("make('Air Code Clímax'"), 'Nome antigo Air Code Clímax ainda está no catálogo');
 assert.ok(!source.includes("make('Air Code Touch'"), 'Nome antigo Air Code Touch ainda está no catálogo');
 
