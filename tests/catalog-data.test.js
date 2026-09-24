@@ -29,7 +29,7 @@ for (const [name, cents] of [
 for (const [tier, cents] of [['wp24', 2499], ['wp22', 2299], ['wp21', 2199]]) {
   assert.ok(source.includes(`...${tier}.map(n=>make(n,'WePink',${cents}))`), `Preço incorreto na ${tier}`);
 }
-for (const name of ['Scarlette Radiance', 'Scarlette', 'VF Tropical', 'VF Golden', 'VF Bloom', 'VF Onyx', 'Infinity Cosmik', 'Infinity Tawny']) {
+for (const name of ['Scarlette Radiance', 'Scarlette', 'VF Tropical', 'VF Golden', 'VF Bloom', 'VF Onyx', 'VF 5th Anniversary Edition', 'Infinity Cosmik', 'Infinity Tawny']) {
   assert.ok(source.includes(`'${name}'`), `Produto ausente: ${name}`);
 }
 for (const [name, cents] of [['Her Code Clímax', 3599], ['Her Code Touch', 3599], ['Floratta Red', 2199]]) {
@@ -44,6 +44,8 @@ assert.ok(fs.existsSync('assets/dalal-lattafa.webp'), 'Arquivo da imagem Dalal n
 assert.ok(source.includes("'One Touch Latte':'assets/one-touch-latte.png'"), 'Imagem One Touch Latte não vinculada');
 assert.ok(source.includes("'One Touch Latte'"), 'Produto One Touch Latte ausente');
 assert.ok(fs.existsSync('assets/one-touch-latte.png'), 'Arquivo da imagem One Touch Latte não existe');
+assert.ok(source.includes("'VF 5th Anniversary Edition':'assets/vf-5th-anniversary-edition.png'"), 'Imagem VF 5th Anniversary Edition não vinculada');
+assert.ok(fs.existsSync('assets/vf-5th-anniversary-edition.png'), 'Arquivo da imagem VF 5th Anniversary Edition não existe');
 assert.ok(!source.includes("make('Air Code Clímax'"), 'Nome antigo Air Code Clímax ainda está no catálogo');
 assert.ok(!source.includes("make('Air Code Touch'"), 'Nome antigo Air Code Touch ainda está no catálogo');
 
