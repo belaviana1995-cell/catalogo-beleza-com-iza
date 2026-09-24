@@ -20,7 +20,7 @@ for (const name of ['Ruby', 'Capri', 'Feive', 'Wonderful', 'Castilho', 'King Blu
 
 for (const [name, cents] of [
   ['Musamam Intense', 4590], ['Athena', 3990], ['Yara Elixir', 3990],
-  ['Durrat Al Aroos', 3990], ['Clube de Nuit Maleka', 3990], ['Afeef', 4990], ['Fakhar Rose', 4590],
+  ['Durrat Al Aroos', 3990], ['Clube de Nuit Maleka', 3990], ['Atheeri', 4590], ['Afeef', 4990], ['Fakhar Rose', 4590],
   ['Sabah Al Ward', 3590], ['Sabah Al Ward Sugar', 3590], ['Asad Bourbon', 4590], ['Dalal', 4590],
 ]) {
   assert.ok(source.includes(`make('${name}','Árabes',${cents},true)`), `Preço incorreto: ${name}`);
@@ -48,6 +48,8 @@ assert.ok(source.includes("'VF 5th Anniversary Edition':'assets/vf-5th-anniversa
 assert.ok(fs.existsSync('assets/vf-5th-anniversary-edition.png'), 'Arquivo da imagem VF 5th Anniversary Edition não existe');
 assert.ok(source.includes("'Clube de Nuit Maleka':'assets/clube-de-nuit-maleka.png'"), 'Imagem Clube de Nuit Maleka não vinculada');
 assert.ok(fs.existsSync('assets/clube-de-nuit-maleka.png'), 'Arquivo da imagem Clube de Nuit Maleka não existe');
+assert.ok(source.includes("'Atheeri':'assets/atheeri.png'"), 'Imagem Atheeri não vinculada');
+assert.ok(fs.existsSync('assets/atheeri.png'), 'Arquivo da imagem Atheeri não existe');
 assert.ok(!source.includes("make('Air Code Clímax'"), 'Nome antigo Air Code Clímax ainda está no catálogo');
 assert.ok(!source.includes("make('Air Code Touch'"), 'Nome antigo Air Code Touch ainda está no catálogo');
 
