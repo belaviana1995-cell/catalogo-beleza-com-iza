@@ -2,6 +2,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 
 const source = fs.readFileSync('app.js', 'utf8');
+const styles = fs.readFileSync('styles.css', 'utf8');
 
 for (const name of [
   'Ruby', 'Haven', 'Capri', 'Feive', 'Wonderful', 'Mauve',
@@ -50,6 +51,9 @@ assert.ok(source.includes("'Clube de Nuit Maleka':'assets/clube-de-nuit-maleka.p
 assert.ok(fs.existsSync('assets/clube-de-nuit-maleka.png'), 'Arquivo da imagem Clube de Nuit Maleka não existe');
 assert.ok(source.includes("'Atheeri':'assets/atheeri.png'"), 'Imagem Atheeri não vinculada');
 assert.ok(fs.existsSync('assets/atheeri.png'), 'Arquivo da imagem Atheeri não existe');
+assert.ok(fs.existsSync('assets/her-code-climax.webp'), 'Arquivo da imagem Her Code Clímax não existe');
+assert.ok(source.includes("p.name==='Her Code Clímax'"), 'Ajuste de centralização do Her Code Clímax ausente');
+assert.ok(styles.includes('.her-code-climax .product-image img'), 'Estilo de centralização do Her Code Clímax ausente');
 assert.ok(!source.includes("make('Air Code Clímax'"), 'Nome antigo Air Code Clímax ainda está no catálogo');
 assert.ok(!source.includes("make('Air Code Touch'"), 'Nome antigo Air Code Touch ainda está no catálogo');
 
