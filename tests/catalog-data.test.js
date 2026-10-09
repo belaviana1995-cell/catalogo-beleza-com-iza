@@ -33,6 +33,8 @@ for (const [tier, cents] of [['wp24', 2499], ['wp22', 2299], ['wp21', 2199]]) {
 for (const name of ['Scarlette Radiance', 'Scarlette', 'VF Tropical', 'VF Golden', 'VF Bloom', 'VF Onyx', 'VF 5th Anniversary Edition', 'Infinity Cosmik', 'Infinity Tawny']) {
   assert.ok(source.includes(`'${name}'`), `Produto ausente: ${name}`);
 }
+assert.ok(source.includes("'Scarlette':'assets/scarlette-wepink.png'"), 'Imagem Scarlette não vinculada');
+assert.ok(fs.existsSync('assets/scarlette-wepink.png'), 'Arquivo da imagem Scarlette não existe');
 for (const [name, cents] of [['Her Code Clímax', 3599], ['Her Code Touch', 3599], ['Floratta Red', 2199]]) {
   assert.ok(source.includes(`make('${name}','O Boticário',${cents})`), `Preço incorreto: ${name}`);
 }
