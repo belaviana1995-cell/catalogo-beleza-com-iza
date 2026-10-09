@@ -21,7 +21,7 @@ for (const name of ['Ruby', 'Capri', 'Feive', 'Wonderful', 'Castilho', 'King Blu
 
 for (const [name, cents] of [
   ['Musamam Intense', 4590], ['Athena', 3990], ['Yara Elixir', 3990],
-  ['Durrat Al Aroos', 3990], ['Clube de Nuit Maleka', 3990], ['Atheeri', 4590], ['Petra da Lattafa', 3990], ['Clube de Nuit Woman Armaf', 3990], ['Ameerati al wataniah', 3590], ['La Vivacité Maison Alhambra', 3590], ['Afeef', 4990], ['Fakhar Rose', 4590],
+  ['Durrat Al Aroos', 3990], ['Clube de Nuit Maleka', 3990], ['Atheeri', 4590], ['Petra da Lattafa', 3990], ['Clube de Nuit Woman Armaf', 3990], ['Ameerati al wataniah', 3590], ['La Vivacité Maison Alhambra', 3590], ['Qaed Al Fursan EDP Lattafa', 3590], ['Afeef', 4990], ['Fakhar Rose', 4590],
   ['Sabah Al Ward', 3590], ['Sabah Al Ward Sugar', 3590], ['Asad Bourbon', 4590], ['Dalal', 4590],
 ]) {
   assert.ok(source.includes(`make('${name}','Árabes',${cents},true)`), `Preço incorreto: ${name}`);
@@ -61,6 +61,8 @@ assert.ok(source.includes("'Ameerati al wataniah':'assets/ameerati-al-wataniah.p
 assert.ok(fs.existsSync('assets/ameerati-al-wataniah.png'), 'Arquivo da imagem Ameerati al wataniah não existe');
 assert.ok(source.includes("'La Vivacité Maison Alhambra':'assets/la-vivacite-maison-alhambra.png'"), 'Imagem La Vivacité Maison Alhambra não vinculada');
 assert.ok(fs.existsSync('assets/la-vivacite-maison-alhambra.png'), 'Arquivo da imagem La Vivacité Maison Alhambra não existe');
+assert.ok(source.includes("'Qaed Al Fursan EDP Lattafa':'assets/qaed-al-fursan-edp-lattafa.png'"), 'Imagem Qaed Al Fursan EDP Lattafa não vinculada');
+assert.ok(fs.existsSync('assets/qaed-al-fursan-edp-lattafa.png'), 'Arquivo da imagem Qaed Al Fursan EDP Lattafa não existe');
 assert.ok(fs.existsSync('assets/her-code-climax.webp'), 'Arquivo da imagem Her Code Clímax não existe');
 assert.ok(source.includes("p.name==='Her Code Clímax'"), 'Ajuste de centralização do Her Code Clímax ausente');
 assert.ok(styles.includes('.her-code-climax .product-image img'), 'Estilo de centralização do Her Code Clímax ausente');
