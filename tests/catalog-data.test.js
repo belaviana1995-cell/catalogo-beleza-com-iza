@@ -37,6 +37,7 @@ assert.ok(source.includes("'Scarlette':'assets/scarlette-wepink.png'"), 'Imagem 
 assert.ok(fs.existsSync('assets/scarlette-wepink.png'), 'Arquivo da imagem Scarlette não existe');
 assert.ok(source.includes("'Ghadan Light':'assets/ghadan-light.png'"), 'Imagem Ghadan Light não vinculada');
 assert.ok(source.includes("'Heaven Pink':'assets/heaven-pink.png'"), 'Imagem Heaven Pink não vinculada');
+assert.ok(source.includes("'Wonbloom Fever':'assets/wonbloom-fever.png'"), 'Imagem Wonbloom Fever não vinculada');
 assert.ok(source.includes("'Ghadan Light'"), 'Produto Ghadan Light ausente');
 assert.ok(fs.existsSync('assets/ghadan-light.png'), 'Arquivo da imagem Ghadan Light não existe');
 for (const [name, cents] of [['Her Code Clímax', 3599], ['Her Code Touch', 3599], ['Floratta Red', 2199]]) {
