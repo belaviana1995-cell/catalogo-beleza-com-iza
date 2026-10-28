@@ -22,7 +22,7 @@ for (const name of ['Ruby', 'Capri', 'Feive', 'Wonderful', 'Castilho', 'King Blu
 for (const [name, cents] of [
   ['Musamam Intense', 4590], ['Athena', 3990], ['Yara Elixir', 3990],
   ['Durrat Al Aroos', 3990], ['Vanilla Voyage', 5490], ['Queen Of Rose', 4590], ['Clube de Nuit Maleka', 3990], ['Atheeri', 4590], ['Petra da Lattafa', 3990], ['Clube de Nuit Woman Armaf', 3990], ['Ameerati al wataniah', 3590], ['La Vivacité Maison Alhambra', 3590], ['Qaed Al Fursan EDP Lattafa', 3590], ['Queen of Arabia', 5490], ['Afeef', 4990], ['Fakhar Rose', 4590],
-  ['Sabah Al Ward', 3590], ['Sabah Al Ward Sugar', 3590], ['Asad Bourbon', 4590], ['Dalal', 4590],
+  ['Sabah Al Ward', 3590], ['Sabah Al Ward Sugar', 3590], ['Sabah Delilah', 3590], ['Asad Bourbon', 4590], ['Dalal', 4590],
 ]) {
   assert.ok(source.includes(`make('${name}','Árabes',${cents},true)`), `Preço incorreto: ${name}`);
 }
@@ -46,6 +46,8 @@ for (const [name, cents] of [['Her Code Clímax', 3599], ['Her Code Touch', 3599
 assert.ok(source.includes("'Her Code Touch':'assets/her-code-touch.png'"), 'Imagem Her Code Touch não vinculada');
 assert.ok(source.includes("'Her Code Clímax':'assets/her-code-climax.webp'"), 'Imagem Her Code Clímax não vinculada');
 assert.ok(fs.existsSync('assets/her-code-touch.png'), 'Arquivo da imagem Her Code Touch não existe');
+assert.ok(source.includes("'Sabah Delilah':'assets/sabah-delilah.png'"), 'Imagem Sabah Delilah não vinculada');
+assert.ok(fs.existsSync('assets/sabah-delilah.png'), 'Arquivo da imagem Sabah Delilah não existe');
 assert.ok(fs.existsSync('assets/her-code-climax.webp'), 'Arquivo da imagem Her Code Clímax não existe');
 assert.ok(source.includes("'Dalal':'assets/dalal-lattafa.webp'"), 'Imagem Dalal não vinculada');
 assert.ok(fs.existsSync('assets/dalal-lattafa.webp'), 'Arquivo da imagem Dalal não existe');
@@ -68,6 +70,8 @@ assert.ok(source.includes("'La Vivacité Maison Alhambra':'assets/la-vivacite-ma
 assert.ok(fs.existsSync('assets/la-vivacite-maison-alhambra.png'), 'Arquivo da imagem La Vivacité Maison Alhambra não existe');
 assert.ok(source.includes("'Qaed Al Fursan EDP Lattafa':'assets/qaed-al-fursan-edp-lattafa.png'"), 'Imagem Qaed Al Fursan EDP Lattafa não vinculada');
 assert.ok(fs.existsSync('assets/qaed-al-fursan-edp-lattafa.png'), 'Arquivo da imagem Qaed Al Fursan EDP Lattafa não existe');
+assert.ok(source.includes("'Sabah Delilah':'assets/sabah-delilah.png'"), 'Imagem Sabah Delilah não vinculada');
+assert.ok(fs.existsSync('assets/sabah-delilah.png'), 'Arquivo da imagem Sabah Delilah não existe');
 assert.ok(fs.existsSync('assets/her-code-climax.webp'), 'Arquivo da imagem Her Code Clímax não existe');
 assert.ok(source.includes("p.name==='Her Code Clímax'"), 'Ajuste de centralização do Her Code Clímax ausente');
 assert.ok(styles.includes('.her-code-climax .product-image img'), 'Estilo de centralização do Her Code Clímax ausente');
